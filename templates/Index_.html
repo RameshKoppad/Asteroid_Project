@@ -1,0 +1,62 @@
+<html>
+<head>
+<title>
+Asteroid Diameter Predictor
+</title>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!-- hide this script tag's contents from old browsers
+function compute(form) {
+    H=eval(form.mag.value)
+    A=eval(form.alb.value)
+    with (Math) {  
+      EE=-0.2*H;
+      D=floor(1000*(1329/pow(A,0.5))* pow(10,EE));
+      D=D/1000
+    }
+    form.result.value = D;
+}
+// done hiding from old browsers -->
+</SCRIPT>
+</head>
+<BODY bgcolor="#000000" TEXT="#eeeeee" LINK="#66aaee" VLINK="#66aaee" BACKGROUND="http://www.physics.sfasu.edu/astro/saturn/saturnbackground.jpg" alink="#AACCFF">
+
+<font face=arial>
+<h2>Asteroid Diameter Predictor</h2>
+
+<FORM>
+H = Absolute Magnitude: <INPUT TYPE="text" NAME="mag" SIZE=10 value="15"> 
+<br>a =    Asteroid Albedo: <INPUT TYPE="text" NAME="alb" SIZE=10 value="0.15">
+<br>D =      Diameter: <INPUT TYPE="text" NAME="result" SIZE=10> kilometers   <INPUT TYPE="button" VALUE="Calculate" ONCLICK="compute(this.form)">
+<BR>
+</FORM>
+
+<p>
+You can change H and p in the text boxes above and recalculate.
+The size of a minor planet was estimated using the following equation:
+
+<p>
+The expression for diameter d in km as a function of absolute magnitude H and geometric albedo a is given by the following equation.
+<blockquote>
+		<p><code>d</code> = 10<sup>[ 3.1236 - 0.5 log<sub>10</sub>(<code>a</code>) - 0.2<code>H</code> ]</sup></p>
+		</blockquote>
+<p>
+
+<p><b>H</b> is the absolute magnitude of the minor planet.  This is the magnitude that it would have if it was 1 AU from 
+the Earth and 1 AU from the Sun while having a phase angle of 0 degrees.  This is an impossible scenario but
+it is just the definition of H. This is different than the absolute magnitude used for stars.  
+
+
+<p><b>p</b> is the geometric albedo of the minor planet.  Perfect reflectors of light have A=1 and perfect absorbers have A=0.
+Typical minor planets have a range of values:  <br>0.05 < A < 0.25
+
+
+<p><b>D</b> is the diameter of the minor planet in kilometers.
+
+<hr>
+</font>
+</body>
+</html>
+</font>
+</body>
+</html>
